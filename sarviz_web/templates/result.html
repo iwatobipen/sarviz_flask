@@ -1,0 +1,45 @@
+{% extends "template.html" %}
+
+{% block header %}
+{% endblock %}
+
+{% block content %}
+
+
+<div class="container">
+<div class="row">
+    <div class="col-md-5">
+      <img src="{{ url_for( 'static', filename='tempfig/'+fname) }}" height="300" width="300" alt="IMAGE"></br>
+    </div>
+    <div class="col-md-3">
+      <table class="table table-hover">
+        <thead>
+          <tr>
+            <th> Pram </th>
+            <th> Val </th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>MW</td><td>{{ molprop[0] }}</td>
+         </tr>
+         <tr>
+            <td>MolLogP</td><td>{{ molprop[1] }}</td>
+         </tr>
+         <tr>
+            <td>TPSA</td><td>{{ molprop[2] }}</td>
+         </tr>
+         <tr>
+            <td>Predicted</td><td>{{ res }}</td>
+         </tr>
+         <tr>
+            <td>#</td><td><a href="/predict/"> predict again </a></td>
+         </tr>
+        </tbody>
+      </table>
+    </div>
+</div>
+</div>
+
+
+{% endblock %}

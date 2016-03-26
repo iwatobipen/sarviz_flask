@@ -1,0 +1,35 @@
+{% extends "template.html" %}
+
+{% block head %}
+{{ super() }}
+<script type="text/javascript" language="javascript" src="{{ url_for('static', filename='js/jsme/jsme.nocache.js') }}"></script>
+<script type="text/javascript" language="javascript">
+    function getSmiles() {
+      var smi = document.JME.smiles();
+      document.getElementById( "smi" ).value = smi;
+    }
+</script>
+
+</script>>
+{% endblock %}
+
+{% block content %}
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-5">
+      <div code="JME.class" name="JME" archive="JME.jar" width="400" height="400" id="JME">
+You have to enable JavaScript in your browser to use JSME!
+     </div>
+   </div>
+ </div>
+<div class="row">
+  <div class="col-md-5">
+    <form method = "POST">
+      {{ form.smi.label }}{{ form.smi( size=20 ) }}
+    <input type="submit" value="predict!" onmouseover=getSmiles()>
+    </form>
+  </div>
+</div>
+</div>
+{% endblock %}
