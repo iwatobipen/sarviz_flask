@@ -1,25 +1,30 @@
-===========================
-Sample app @ mishima.syk#8
-===========================
+==============================
+This is sarviz_web_app sample
+==============================
 
-Author; iwatobipen
+What is This?
+==============
 
-Description
-============
-
-  - This is test app for interactive SAR visualizer.
+ - This is sample code for interactive visualization of SAR for chemist.
+ 
 
 Requirements
-============
+==============
 
- - Python3.x (Python2.x also works...maybe)
- - flask
- - flask-bootstrap
- - scikit-learn
+ - Python3
+ - Flask
+ - Fkask_bootstrap
  - RDKit
-
+ - scikit-learn
+ - matplotlib
 
 Recommendation
-===============
+================
 
- - I recommend setup your environment using Anaconda.
+ - I recommend install tools using Anaconda.
+
+Basic Usage
+============
+
+ - only tipe python app.py
+ - then access http://127.0.0.1:5000/predict
